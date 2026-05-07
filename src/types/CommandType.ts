@@ -1,1 +1,10 @@
-export type CommandType = 'FD' | 'BK' | 'RT' | 'LT' | 'PU' | 'PD' | 'REPEAT' | 'CS';
+export enum CommandType {
+    FD = 'FD',
+    BK = 'BK',
+    RT = 'RT',
+    LT = 'LT',
+    PU = 'PU',
+    PD = 'PD',
+    REPEAT = 'REPEAT',
+    CS = 'CS',
+}
