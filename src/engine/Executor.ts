@@ -15,6 +15,13 @@ export class Executor {
                     angle: -90,
                     lines: []
                 };
+
+            case CommandType.PU:
+                return { ...state, isPenDown: false };
+
+            case CommandType.PD:
+                return { ...state, isPenDown: true };
+
             case CommandType.FD:
                 return Executor.move(currentState, command.value || 0);
 
