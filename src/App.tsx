@@ -7,9 +7,9 @@ const App = () => {
 
   return (
     // Main container: Full screen, no scroll
-    <div className="flex h-screen w-screen overflow-hidden bg-zinc-950 text-zinc-100">
+    <div className="dos-shell flex h-screen w-screen overflow-hidden">
       {/* Left Side: Terminal */}
-      <section className="flex h-full w-1/2 flex-col border-r border-zinc-800">
+      <section className="dos-panel flex h-full w-1/2 flex-col border-r border-zinc-700">
         <Terminal
           code={code}
           setCode={setCode}
@@ -18,7 +18,7 @@ const App = () => {
       </section>
 
       {/* Right Side: Output */}
-      <section className="relative h-full w-1/2 bg-black">
+      <section className="dos-panel relative h-full w-1/2">
         <Canvas />
       </section>
     </div>

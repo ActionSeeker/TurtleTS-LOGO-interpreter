@@ -21,7 +21,7 @@ const Canvas = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="h-full w-full cursor-crosshair bg-black"
+      className="dos-screen h-full w-full cursor-crosshair"
     />
   );
 };

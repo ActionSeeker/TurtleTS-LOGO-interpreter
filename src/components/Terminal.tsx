@@ -6,11 +6,11 @@ interface TerminalProps {
 
 const Terminal = ({ code, setCode, onRun }: TerminalProps) => {
   return (
-    <div className="flex flex-1 flex-col p-4 font-mono">
+    <div className="dos-terminal flex flex-1 flex-col p-4 font-mono">
       {/* Header */}
-      <div className="mb-2 flex items-center justify-between text-xs uppercase tracking-widest text-zinc-500">
+      <div className="terminal-header mb-2 flex items-center justify-between text-xs uppercase tracking-widest text-zinc-900">
         <span>Turtle Interpreter v1.0</span>
-        <span className="text-green-500">System Ready</span>
+        <span className="text-[#006400]">System Ready</span>
       </div>
 
       {/* Input Area */}
@@ -18,7 +18,7 @@ const Terminal = ({ code, setCode, onRun }: TerminalProps) => {
         value={code}
         onChange={(e) => setCode(e.target.value)}
         spellCheck={false}
-        className="flex-1 resize-none bg-transparent p-2 text-sm leading-relaxed outline-none placeholder:text-zinc-700"
+        className="flex-1 resize-none bg-transparent p-3 text-base leading-relaxed text-[#d9d4b0] outline-none placeholder:text-[#999]"
         placeholder="ENTER COMMANDS (e.g. FD 100)..."
       />
 
@@ -26,12 +26,12 @@ const Terminal = ({ code, setCode, onRun }: TerminalProps) => {
       <div className="mt-4 flex gap-2 border-t border-zinc-800 pt-4">
         <button
           onClick={onRun}
-          className="bg-zinc-100 px-6 py-2 text-xs font-bold text-black transition-colors hover:bg-green-500"
+          className="dos-button px-6 py-2 text-xs font-bold"
         >
           EXECUTE
         </button>
         <button
-          className="border border-zinc-700 px-6 py-2 text-xs font-bold transition-colors hover:bg-zinc-800"
+          className="dos-button border border-zinc-700 px-6 py-2 text-xs font-bold"
           onClick={() => setCode('')}
         >
           CLEAR

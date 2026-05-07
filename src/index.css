@@ -2,24 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Perfect DOS VGA 437';
+  src: url('/fonts/perfect-DOS-VGA-437-Win.ttf') format('truetype'),
+       url('/fonts/perfect-DOS-VGA-437.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  color-scheme: dark;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #0f172a;
-  color: #f8fafc;
+  color-scheme: light;
+  font-family: 'Perfect DOS VGA 437', 'Courier New', Courier, monospace;
+  background-color: #f2e5c4;
+  color: #111;
 }
 
 html {
   min-height: 100%;
+  font-size: 20px;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.15), transparent 30%),
-    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  font-size: 1rem;
+  background: #f2e5c4;
+  color: #111;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.dos-shell {
+  background: #f2e5c4;
+  color: #111;
+}
+
+.dos-panel {
+  background: #f7ecce;
+  border-color: #8a7751;
+}
+
+.dos-screen {
+  background: #f7ecce;
+  border: 4px solid #c2b18f;
+  box-shadow: inset 0 0 0 1px #d3c49a;
+}
+
+.dos-terminal {
+  background: #f7ecce;
+  color: #111;
+  border: 3px solid #c2b18f;
+  box-shadow: inset 0 0 0 1px #d3c49a;
+  font-family: 'Perfect DOS VGA 437', 'Courier New', Courier, monospace;
+}
+
+.terminal-header {
+  background: #e3d5ac;
+  color: #111;
+  border-bottom: 1px solid #b8a575;
+  padding: 0.75rem 1rem;
+}
+
+.dos-terminal textarea {
+  background: rgba(242, 229, 196, 0.95);
+  color: #111;
+  border: 1px solid #b3a07b;
+}
+
+.dos-terminal textarea::selection {
+  background: #8f7d45;
+  color: #111;
+}
+
+.dos-button {
+  background: #f2e5c4;
+  color: #111;
+  border: 2px solid #111;
+}
+
+.dos-button:hover {
+  background: #e7d59f;
 }
