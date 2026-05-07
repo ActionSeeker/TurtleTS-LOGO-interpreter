@@ -7,4 +7,6 @@ export enum CommandType {
     PD = 'PD',
     REPEAT = 'REPEAT',
     CS = 'CS',
+    SETX = 'SETX',
+    SETY = 'SETY'
 }

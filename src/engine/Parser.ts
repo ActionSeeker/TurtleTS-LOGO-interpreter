@@ -92,7 +92,9 @@ export class Parser {
                             CommandType.FD,
                             CommandType.BK,
                             CommandType.RT,
-                            CommandType.LT
+                            CommandType.LT,
+                            CommandType.SETX,
+                            CommandType.SETY
                         ].includes(token as CommandType);
 
                         const value = requiresArg ? parseFloat(tokens[ctx.idx + 1]) : undefined;

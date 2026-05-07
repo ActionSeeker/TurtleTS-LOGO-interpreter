@@ -86,3 +86,20 @@ body {
 .dos-button:hover {
   background: #e7d59f;
 }
+
+.typing-cursor::after {
+  content: "█";
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
