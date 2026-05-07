@@ -11,6 +11,7 @@ const Terminal = ({ code, setCode, onRun, onClear }: TerminalProps) => {
   const title = useTypingEffect('TURTLE INTERPRETER V1.0', 50);
   const status = useTypingEffect('SYSTEM READY', 80);
 
+  // @ts-ignore
   const handlePaste = (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
     e.preventDefault();
 
@@ -49,7 +50,7 @@ const Terminal = ({ code, setCode, onRun, onClear }: TerminalProps) => {
         value={code}
         onChange={(e) => setCode(e.target.value)}
         spellCheck={false}
-        onPaste={handlePaste}
+        // onPaste={handlePaste}
         className="flex-1 resize-none bg-transparent p-3 text-base leading-relaxed text-[#d9d4b0] outline-none placeholder:text-[#999]"
         placeholder="ENTER COMMANDS (e.g. FD 100)..."
       />
