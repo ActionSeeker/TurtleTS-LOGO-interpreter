@@ -6,9 +6,9 @@ import { useTurtle } from './components/hooks/handleExecute';
 const App = () => {
   const [code, setCode] = useState('');
   const { state, executeCode, clear } = useTurtle({
-    x: 400,
-    y: 300,
-    angle: -90,
+    x: 0,
+    y: 0,
+    angle: -90, // Upward
     isPenDown: true,
     lines: [],
   });
