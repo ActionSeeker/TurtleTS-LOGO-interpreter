@@ -1,0 +1,1 @@
+export type CommandType = 'FD' | 'BK' | 'RT' | 'LT' | 'PU' | 'PD' | 'REPEAT' | 'CS';
