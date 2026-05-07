@@ -2,9 +2,10 @@ interface TerminalProps {
   code: string;
   setCode: (val: string) => void;
   onRun: () => void;
+  onClear: () => void;
 }
 
-const Terminal = ({ code, setCode, onRun }: TerminalProps) => {
+const Terminal = ({ code, setCode, onRun, onClear }: TerminalProps) => {
   return (
     <div className="dos-terminal flex flex-1 flex-col p-4 font-mono">
       {/* Header */}
@@ -32,7 +33,7 @@ const Terminal = ({ code, setCode, onRun }: TerminalProps) => {
         </button>
         <button
           className="dos-button border border-zinc-700 px-6 py-2 text-xs font-bold"
-          onClick={() => setCode('')}
+          onClick={onClear}
         >
           CLEAR
         </button>

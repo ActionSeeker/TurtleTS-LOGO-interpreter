@@ -5,7 +5,7 @@ import { useTurtle } from './components/hooks/handleExecute';
 
 const App = () => {
   const [code, setCode] = useState('');
-  const { state, executeCode } = useTurtle({
+  const { state, executeCode, clear } = useTurtle({
     x: 400,
     y: 300,
     angle: -90,
@@ -21,6 +21,7 @@ const App = () => {
           code={code}
           setCode={setCode}
           onRun={() => executeCode(code)}
+          onClear={() => clear()}
         />
       </section>
 

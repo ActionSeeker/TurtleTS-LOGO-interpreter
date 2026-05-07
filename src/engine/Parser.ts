@@ -19,7 +19,7 @@ export class Parser {
          * - \] : closing brackets for nested commands
          * The 'g' flag ensures we get all matches in the string, not just the first one.
          */
-        return code.match(/\w+|\[|\]/g) || [];
+        return code.toUpperCase().match(/\w+|\[|\]/g) || [];
     }
 
     private static createBracketMap(tokens: string[]): Map<number, number> {

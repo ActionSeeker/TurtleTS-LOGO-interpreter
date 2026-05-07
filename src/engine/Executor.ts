@@ -10,12 +10,11 @@ export class Executor {
             case CommandType.CS:
                 return {
                     ...currentState,
-                    x: 400, // Or half your canvas width
-                    y: 300,
+                    x: 0,
+                    y: 0,
                     angle: -90,
                     lines: []
                 };
-
             case CommandType.FD:
                 return Executor.move(currentState, command.value || 0);
 
@@ -63,6 +62,11 @@ export class Executor {
             });
         }
 
-        return { ...start, lines: newLines };
+        return {
+            ...start,
+            x: newX,
+            y: newY,
+            lines: newLines
+        };
     }
 }
